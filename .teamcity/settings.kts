@@ -1,5 +1,4 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
-import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.vcsLabeling
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
 /*
@@ -46,15 +45,6 @@ object Templ : Template({
 
     vcs {
         root(HttpsGithubComIyankeBigdata)
-    }
-
-    features {
-        vcsLabeling {
-            id = "BUILD_EXT_1"
-            enabled = false
-            vcsRootId = "${HttpsGithubComIyankeBigdata.id}"
-            branchFilter = ""
-        }
     }
 })
 
